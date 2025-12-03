@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>KIASMA - Présentation</title>
+
+  <!-- Police -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+
+    /* HERO */
+
+    .hero-section {
+      background: linear-gradient(
+        135deg,
+        #7b68c4 0%,
+        #e57597 50%,
+        #ff8c42 100%
+      );
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 80px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      z-index: 2;
+    }
+
+    .logo-large {
+      width: 120px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .hero-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 40px;
+      opacity: 0.95;
+    }
+
+    .founder-photo {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 20px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      object-fit: cover;
+    }
+
+    /* LAYOUT GÉNÉRAL */
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section {
+      margin-bottom: 100px;
+    }
+
+    .section:nth-child(even) {
+      background: linear-gradient(
+        135deg,
+        rgba(123, 104, 196, 0.05) 0%,
+        rgba(229, 117, 151, 0.05) 100%
+      );
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      background: linear-gradient(
+        135deg,
+        #7b68c4,
+        #e57597,
+        #ff8c42
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .section-subtitle {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 40px 0 20px;
+      color: #444;
+    }
+
+    .highlight-box {
+      background: linear-gradient(
+        135deg,
+        rgba(123, 104, 196, 0.1) 0%,
+        rgba(229, 117, 151, 0.1) 100%
+      );
+      border-left: 5px solid #7b68c4;
+      padding: 30px;
+      margin: 30px 0;
+      border-radius: 10px;
+    }
+
+    /* CARTES & GRILLES */
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+      );
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border-top: 4px solid #7b68c4;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(
+        135deg,
+        #7b68c4,
+        #e57597
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .feature-list li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      background: linear-gradient(
+        135deg,
+        #7b68c4,
+        #e57597
+      );
+      color: #fff;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .roadmap-cards {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+      );
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .roadmap-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid;
+    }
+
+    .roadmap-card.v1 {
+      border-left-color: #7b68c4;
+    }
+
+    .roadmap-card.v2 {
+      border-left-color: #a67bc4;
+    }
+
+    .roadmap-card.v3 {
+      border-left-color: #e57597;
+    }
+
+    .roadmap-card.v4 {
+      border-left-color: #ff8c42;
+    }
+
+    .revenue-sources {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+      );
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .revenue-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-top: 3px solid #7b68c4;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(350px, 1fr)
+      );
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .team-role {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid #e57597;
+    }
+
+    /* TABLE RISQUES */
+
+    .risk-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .risk-table th {
+      background: linear-gradient(
+        135deg,
+        #7b68c4,
+        #e57597
+      );
+      color: #fff;
+      padding: 15px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .risk-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+
+    /* BLOCS PROBLÈMES */
+
+    .problem-point {
+      background: rgba(255, 140, 66, 0.1);
+      border-left: 4px solid #ff8c42;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    .problem-title {
+      font-weight: 600;
+      color: #ff8c42;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      background: linear-gradient(
+        135deg,
+        #7b68c4 0%,
+        #e57597 50%,
+        #ff8c42 100%
+      );
+      color: #fff;
+      padding: 60px 0;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .logo-footer {
+      width: 80px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .founder-photo {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px auto 0;
+        display: block;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HERO -->
+  <header class="hero-section">
+    <img
+      src="photo Julien.png"
+      alt="Fondateur KIASMA"
+      class="founder-photo"
+    />
+
+    <div class="hero-content">
+      <img
+        src="logo kiasma.png"
+        alt="Logo KIASMA"
+        class="logo-large"
+      />
+      <h1 class="hero-title">KIASMA</h1>
+      <p class="hero-subtitle">Présentation du projet</p>
+      <p style="font-size: 1.9rem; opacity: 0.9">
+        La plateforme de référence pour la formation continue des professions de santé
+      </p>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <div class="container">
+      <!-- VISION & AMBITION -->
+      <section class="section" id="vision-ambition">
+        <h2 class="section-title">🎯 Vision &amp; Ambition</h2>
+
+        <div class="highlight-box">
+          <h3 class="section-subtitle">Le constat</h3>
+          <p style="font-size: 1.1rem; margin-bottom: 20px;">
+            <strong>En France, plus de 2 millions de professionnels de santé</strong> (kinésithérapeutes, infirmiers, médecins, pharmaciens,
+            etc.) ont <strong>l'obligation légale de se former
+              continuellement</strong>
+            pour maintenir leurs compétences à jour. C'est ce qu'on
+            appelle le
+            <strong>développement professionnel continu</strong>.
+          </p>
+          <p style="font-size: 1.1rem; margin-bottom: 20px;">
+            Aujourd'hui, <strong>plus de 4 500 organismes de
+              formation</strong>
+            proposent ces formations, mais le marché (>1Md€) est totalement
+            fragmenté : chaque organisme a son propre site web, sa
+            propre communication, et les professionnels doivent
+            chercher sur des dizaines de sites différents pour
+            trouver la formation qui leur convient.
+          </p>
+        </div>
+
+        <div class="highlight-box">
+          <h3 class="section-subtitle">
+            Notre vision : S'inscrire à une formation comme on réserve un hôtel
+          </h3>
+          <p style="font-size: 1.1rem; margin-bottom: 15px;">
+            <strong>KIASMA</strong> est la plateforme qui centralise
+            <strong>toute l'offre de formation</strong>
+            pour les professionnels de santé, comme Booking.com
+            centralise les hôtels dans le monde.
+          </p>
+          <p
+            style="
+              font-size: 1.2rem;
+              font-weight: 600;
+              margin-top: 20px;
+              color: #7b68c4;
+            "
+          >
+            Un seul endroit pour chercher, comparer, s'inscrire et
+            payer sa prochaine formation professionnelle.
+          </p>
+        </div>
+
+        <h3 class="section-subtitle">
+          Comment fonctionne KIASMA ?
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          KIASMA est une <strong>double plateforme</strong> qui
+          résout les problèmes des deux côtés du marché :
+        </p>
+
+        <!-- Côté PS -->
+        <div
+          style="
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <h4
+            style="color: #7b68c4; margin-bottom: 15px;"
+          >
+            📱 Pour les professionnels de santé (côté "demande")
+          </h4>
+          <ul class="feature-list">
+            <li>
+              <strong>Recherche simplifiée :</strong> Trouvez toutes
+              les formations en un seul endroit (par spécialité,
+              localisation, date, thème)
+            </li>
+            <li>
+              <strong>Comparaison instantanée :</strong> Comparez les
+              prix, les dates, les formateurs et les avis
+            </li>
+            <li>
+              <strong>Inscription simplifiée :</strong> Inscrivez-vous
+              et payez en ligne en quelques clics
+            </li>
+            <li>
+              <strong>Documents automatiques :</strong> Recevez
+              conventions, convocations et attestations
+              automatiquement
+            </li>
+          </ul>
+        </div>
+
+        <!-- Côté OF -->
+        <div
+          style="
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <h4
+            style="color: #e57597; margin-bottom: 15px;"
+          >
+            🏢 Pour les organismes de formation (côté "offre")
+          </h4>
+          <ul class="feature-list">
+            <li>
+              <strong>Visibilité maximale :</strong> Diffusez vos
+              formations auprès de 2 millions de professionnels
+            </li>
+            <li>
+              <strong>CRM intégré :</strong> Gérez votre catalogue,
+              vos sessions et vos inscrits depuis une seule interface
+            </li>
+            <li>
+              <strong>Automatisation :</strong> Les conventions,
+              convocations et documents sont générés automatiquement
+              (gain immédiat de 5-10h par session)
+            </li>
+            <li>
+              <strong>Communication IA :</strong> Générez
+              automatiquement vos posts réseaux sociaux, visuels et
+              contenus
+            </li>
+            <li>
+              <strong>Paiement sécurisé :</strong> Encaissez
+              directement sur la plateforme (nous prenons une
+              commission de 8 à 15%)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stats Vision -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">30M€</span>
+            <div class="stat-label">
+              Volume de ventes cible (3 ans)
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2.4M€</span>
+            <div class="stat-label">
+              CA cible (8% commission)
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">+50%</span>
+            <div class="stat-label">Marge EBITDA</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">50000+</span>
+            <div class="stat-label">
+              Inscriptions via KIASMA
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3 class="section-subtitle">🏆 Objectif final</h3>
+          <p
+            style="
+              font-size: 1.3rem;
+              font-weight: 600;
+              text-align: center;
+              color: #7b68c4;
+            "
+          >
+            "L'infrastructure digitale de la formation continue en
+            santé"
+          </p>
+          <p style="text-align: center; margin-top: 10px;">
+            Et à terme : "Le standard de réservation de la formation
+            continue pour toutes les professions libérales"
+          </p>
+        </div>
+      </section>
+
+      <!-- PROBLÈME & MARCHÉ -->
+      <section class="section" id="probleme-marche">
+        <h2 class="section-title">🔥 Problème &amp; Marché</h2>
+
+        <!-- Lexique -->
+        <div
+          style="
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <h3
+            style="color: #7b68c4; margin-bottom: 15px;"
+          >
+            📖 Lexique des termes
+          </h3>
+          <p style="margin-bottom: 10px;">
+            <strong>OF :</strong> Organisme de Formation - entreprise
+            qui organise et vend des formations professionnelles
+          </p>
+          <p style="margin-bottom: 10px;">
+            <strong>PS :</strong> Professionnel de Santé -
+            kinésithérapeute, infirmier, médecin, pharmacien, etc.
+          </p>
+          <p style="margin-bottom: 10px;">
+            <strong>DPC :</strong> Développement Professionnel
+            Continu - système de financement public des formations
+            pour les professionnels de santé
+          </p>
+          <p style="margin-bottom: 10px;">
+            <strong>FIFPL :</strong> Fonds Interprofessionnel de
+            Formation des Professionnels Libéraux - organisme qui
+            finance les formations des libéraux
+          </p>
+          <p style="margin-bottom: 10px;">
+            <strong>CRM :</strong> Customer Relationship Management -
+            logiciel de gestion de la relation client
+          </p>
+          <p style="margin-bottom: 10px;">
+            <strong>GMV :</strong> Gross Merchandise Value - valeur
+            totale des transactions sur la plateforme
+          </p>
+        </div>
+
+        <!-- Problèmes OF -->
+        <h3 class="section-subtitle">
+          Le problème côté ORGANISMES DE FORMATION
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Les organismes de formation sont en majorité des
+          <strong>petites structures</strong> (souvent 2-10
+          personnes) qui organisent des formations pour les
+          professionnels de santé. Ils rencontrent aujourd'hui
+          <strong>3 problèmes majeurs</strong> qui freinent leur
+          croissance :
+        </p>
+
+        <div class="problem-point">
+          <div class="problem-title">
+            🔥 1. Manque de visibilité – le marché est totalement
+            fragmenté
+          </div>
+          <p>
+            Chaque OF possède son propre site, fait son propre
+            marketing (souvent artisanal), n'atteint qu'une
+            micro-partie de son public et dépend fortement du
+            bouche-à-oreille.
+          </p>
+          <p>
+            <strong>➡️ Résultat :</strong> leurs formations sont
+            invisibles pour 80% des professionnels.
+          </p>
+        </div>
+
+        <div class="problem-point">
+          <div class="problem-title">
+            🔥 2. Acquisition coûteuse et inefficace
+          </div>
+          <p>
+            Un OF doit gérer newsletters, réseaux sociaux, posts
+            Instagram, SEO de niche, emailing interne, campagnes
+            payantes, création de visuels... pour chaque session.
+          </p>
+          <p>
+            <strong>➡️ Ils passent énormément de temps pour un ROI
+              très faible et n'ont souvent pas les compétences en
+              interne pour la communication.</strong>
+          </p>
+        </div>
+
+        <div class="problem-point">
+          <div class="problem-title">
+            🔥 3. L'administratif explose
+          </div>
+          <p>
+            Pour chaque session : conventions individuelles,
+            convocations, attestations de présence, suivi des
+            inscrits, émargement, questionnaires de satisfaction,
+            gestion des financements, factures,...
+          </p>
+          <p>
+            <strong>➡️ 5 à 10 heures d'administratif par date de
+              formation.</strong>
+          </p>
+        </div>
+
+        <!-- Problème PS -->
+        <h3 class="section-subtitle">
+          Le problème côté PROFESSIONNELS DE SANTÉ
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Les professionnels de santé (infirmiers, médecins,
+          podologues...) ont
+          <strong>l'obligation légale</strong> de se former chaque
+          année. Mais pour eux,
+          <strong>trouver et s'inscrire à une formation est un
+            véritable parcours administratif</strong> :
+        </p>
+
+        <div class="problem-point">
+          <div class="problem-title">
+            🔥 1. Recherche de formation = parcours du combattant
+          </div>
+          <p>
+            Aujourd'hui, un orthophoniste, un ORL, un pédiatre visite
+            5 à 20 sites d'OF, cherche dans Google avec des résultats
+            non pertinents, et s'en remet au bouche-à-oreille.
+          </p>
+          <p>
+            <strong>➡️ Aucun endroit unique pour trouver toutes les
+              formations pertinentes.</strong>
+          </p>
+        </div>
+
+        <!-- Stats marché -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">+2M</span>
+            <div class="stat-label">
+              Professionnels de santé en France
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1.5Mds€</span>
+            <div class="stat-label">
+              Marché annuel de la formation
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">4500</span>
+            <div class="stat-label">
+              Organismes de formation
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">0</span>
+            <div class="stat-label">
+              Booking.com de la formation
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3 style="color: #ff8c42;">
+            🔥 Pourquoi c'est une opportunité unique ?
+          </h3>
+          <p style="font-size: 1.1rem; margin-bottom: 15px;">
+            <strong>Le marché de la formation santé en France
+              représente 1,5 milliards d'euros par an</strong>,
+            avec +2 millions de professionnels qui DOIVENT se former
+            chaque année.
+          </p>
+          <p style="font-size: 1.1rem; margin-bottom: 15px;">
+            Pourtant,
+            <strong>aucune plateforme centralisée n'existe
+              aujourd'hui</strong> : pas de "Booking.com" de la
+            formation, pas de "Amazon" de la formation continue. Le
+            marché est totalement fragmenté pour les organismes.
+          </p>
+          <p
+            style="
+              font-weight: 600;
+              color: #7b68c4;
+              font-size: 1.2rem;
+            "
+          >
+            → C'est une opportunité rare de créer L'INFRASTRUCTURE
+            centrale d'un marché de plusieurs milliards d'euros.
+          </p>
+        </div>
+      </section>
+
+      <!-- PROPOSITION DE VALEUR & POSITIONNEMENT -->
+      <section class="section" id="proposition-valeur">
+        <h2 class="section-title">
+          💎 Proposition de valeur &amp; Positionnement
+        </h2>
+
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">
+          KIASMA résout les problèmes des
+          <strong>deux côtés du marché</strong> en apportant une
+          valeur unique à chaque acteur.
+        </p>
+
+        <h3 class="section-subtitle">
+          Proposition de valeur pour les ORGANISMES DE FORMATION
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Les organismes de formation sont notre
+          <strong>client principal</strong>. Nous leur apportons 3
+          bénéfices majeurs :
+        </p>
+
+        <div class="revenue-sources">
+          <div class="revenue-card">
+            <h4
+              style="color: #7b68c4; margin-bottom: 15px;"
+            >
+              🟦 Visibilité immédiate
+            </h4>
+            <ul class="feature-list">
+              <li>Canal de diffusion centralisé</li>
+              <li>Accès direct à +2 millions de professionnels</li>
+              <li>SEO massif</li>
+              <li>40% à 80% de visibilité supplémentaire</li>
+            </ul>
+          </div>
+
+          <div class="revenue-card">
+            <h4
+              style="color: #7b68c4; margin-bottom: 15px;"
+            >
+              🟦 Automatisation administrative
+            </h4>
+            <ul class="feature-list">
+              <li>Supprime 5 à 10h de gestion par session</li>
+              <li>Préinscriptions automatiques</li>
+              <li>Vérification du diplôme de l'apprenant</li>
+              <li>Documents légaux pré-remplis</li>
+              <li>Synchronisation avec notre CRM</li>
+            </ul>
+          </div>
+
+          <div class="revenue-card">
+            <h4
+              style="color: #7b68c4; margin-bottom: 15px;"
+            >
+              🟦 Module communication avec IA intégrée
+            </h4>
+            <ul class="feature-list">
+              <li>Posts Instagram automatiques</li>
+              <li>Visuels autogénérés</li>
+              <li>Plus besoin de community manager</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">
+          Proposition de valeur pour les PROFESSIONNELS DE SANTÉ
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Les professionnels de santé sont nos
+          <strong>utilisateurs finaux</strong>. Pour eux, KIASMA
+          simplifie radicalement la recherche et l'inscription aux
+          formations :
+        </p>
+
+        <div class="revenue-sources">
+          <div class="revenue-card">
+            <h4
+              style="color: #e57597; margin-bottom: 15px;"
+            >
+              🟩 Accès centralisé
+            </h4>
+            <p>
+              Un endroit unique pour chercher, comparer, filtrer,
+              s'inscrire, payer, obtenir les documents
+            </p>
+          </div>
+
+          <div class="revenue-card">
+            <h4
+              style="color: #e57597; margin-bottom: 15px;"
+            >
+              🟩 Moteur de recherche intelligent
+            </h4>
+            <p>
+              Filtres par profession, localisation, pathologie,
+              format, financement, date, formateur
+            </p>
+          </div>
+
+          <div class="revenue-card">
+            <h4
+              style="color: #e57597; margin-bottom: 15px;"
+            >
+              🟩 Recommandations IA
+            </h4>
+            <p>
+              Formations pertinentes selon le CV, la demande
+              explicite, la localisation du professionnel
+            </p>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3 class="section-subtitle">
+            🎯 Notre positionnement unique
+          </h3>
+          <p
+            style="
+              font-size: 1.4rem;
+              font-weight: 600;
+              text-align: center;
+              color: #7b68c4;
+              margin-bottom: 20px;
+            "
+          >
+            "Le Booking.com de la formation professionnelle en
+            santé"
+          </p>
+          <p style="font-size: 1.05rem; margin-bottom: 15px;">
+            <strong>Ce que nous SOMMES :</strong> Une plateforme qui
+            centralise toute l'offre de formation + automatise toute
+            la gestion administrative pour les organismes + génère
+            leur communication avec l'IA.
+          </p>
+          <p style="font-size: 1.05rem;">
+            <strong>Ce que nous NE SOMMES PAS :</strong> Nous ne
+            sommes ni un simple annuaire, ni un organisme de
+            formation, ni un LMS (Learning Management System). Nous
+            sommes l'infrastructure centrale qui connecte l'offre et
+            la demande.
+          </p>
+        </div>
+      </section>
+
+      <!-- PRODUIT & ROADMAP -->
+      <section class="section" id="produit-roadmap">
+        <h2 class="section-title">🚀 Produit &amp; Roadmap</h2>
+
+        <h3 class="section-subtitle">Vision Produit</h3>
+        <p style="font-size: 1.1rem; margin-bottom: 25px;">
+          KIASMA n'est pas qu'un simple site web. C'est une
+          <strong>plateforme complète</strong> qui combine 4 éléments
+          essentiels en un seul produit :
+        </p>
+
+        <div class="revenue-sources">
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              🔹 Marketplace complète
+            </h4>
+            <p>
+              Pour trouver, comparer, filtrer, s'inscrire et payer
+              des formations
+            </p>
+          </div>
+
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              🔹 Un CRM simple et adapté
+            </h4>
+            <p>
+              Pour automatiser l'administratif des organismes de
+              formation agiles et leur offrir un suivi de leurs
+              performances sur la plateforme
+            </p>
+          </div>
+
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              🔹 Couche IA intégrée
+            </h4>
+            <p>
+              Pour faciliter le onboarding client et générer du
+              contenu automatiquement
+            </p>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">
+          Roadmap produit : construction progressive sur 3 ans
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Nous construisons KIASMA en
+          <strong>4 phases progressives</strong>, chacune ajoutant des
+          fonctionnalités clés. Cette approche nous permet de générer
+          des revenus dès la V1 tout en construisant progressivement
+          la plateforme la plus complète du marché.
+        </p>
+
+        <div class="roadmap-cards">
+          <div class="roadmap-card v1">
+            <h4>V1 : Première version (0-6 mois)</h4>
+            <p>
+              <strong>Objectif :</strong> Marketplace robuste +
+              espace OF minimaliste
+            </p>
+            <ul class="feature-list">
+              <li>Moteur de recherche complet</li>
+              <li>Fiches formations propres</li>
+              <li>Espace OF simple</li>
+              <li>Inscription semi-automatique</li>
+              <li>IA génération texte basique</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-card v2">
+            <h4>V2 : Version opérationnelle (6-12 mois)</h4>
+            <p>
+              <strong>Objectif :</strong> Automatiser paiement et
+              documents
+            </p>
+            <ul class="feature-list">
+              <li>Stripe Connect</li>
+              <li>CRM complet</li>
+              <li>Documents automatiques</li>
+              <li>IA visuels brandés</li>
+              <li>Emails automatiques</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-card v3">
+            <h4>V3 : Version avancée (12-24 mois)</h4>
+            <p>
+              <strong>Objectif :</strong> Différenciation forte +
+              scale
+            </p>
+            <ul class="feature-list">
+              <li>Avis et scoring</li>
+              <li>Intégrations profondes</li>
+              <li>Assistant OF (chat)</li>
+              <li>Gestion administrative avancée</li>
+              <li>Connexion avec les financeurs</li>
+              <li>
+                Interface conversationnelle de recherche pour les PS
+              </li>
+            </ul>
+          </div>
+
+          <div class="roadmap-card v4">
+            <h4>V4 : Expansion (24-36 mois)</h4>
+            <p>
+              <strong>Objectif :</strong> Plateforme européenne
+              francophone standard
+            </p>
+            <ul class="feature-list">
+              <li>
+                Internationalisation (Suisse, Luxembourg, Belgique)
+              </li>
+              <li>
+                Nouvelles professions réglementées (avocats,
+                notaires, experts-comptables,...)
+              </li>
+              <li>Offre entreprise + hôpitaux</li>
+              <li>Matching automatique</li>
+              <li>Parcours personnalisés</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUSINESS MODEL & METRIQUES -->
+      <section class="section" id="business-model">
+        <h2 class="section-title">
+          💰 Business Model &amp; Métriques
+        </h2>
+
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">
+          Notre modèle économique repose sur
+          <strong>3 sources de revenus complémentaires</strong>, ce
+          qui nous permet de diversifier nos revenus et de maximiser
+          la valeur que nous capturons.
+        </p>
+
+        <h3 class="section-subtitle">Les 3 sources de revenus</h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          <strong>Modèle hybride :</strong> Nous combinons les
+          revenus d'une marketplace (commissions sur les
+          transactions) avec les revenus d'un SaaS B2B (abonnements
+          mensuels) et des services de consulting (communication,
+          formation).
+        </p>
+
+        <div class="revenue-sources">
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              1️⃣ Commissions sur inscription
+            </h4>
+            <p><strong>Panier moyen :</strong> ~600€</p>
+            <p><strong>Commission :</strong> 8 à 15%</p>
+            <p>
+              <strong>Revenu par inscription :</strong> ~50 à 90€
+            </p>
+          </div>
+
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              2️⃣ Packs annuels B2B
+            </h4>
+            <p><strong>Pack Visibilité :</strong> 50-400€/an</p>
+            <p><strong>Pack Communication :</strong> 400-800€/an</p>
+            <p><strong>Pack CRM :</strong> 200-2000€/an</p>
+          </div>
+
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              3️⃣ Formation &amp; Consulting
+            </h4>
+            <p><strong>Audit SEO :</strong> 1000€</p>
+            <p>
+              <strong>Accompagnement 2 sem communication RS :</strong>
+              1500€
+            </p>
+            <p><strong>Pack premium :</strong> 3000€</p>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">
+          Objectifs de chiffre d'affaires sur 3 ans
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Ces projections sont basées sur des hypothèses
+          conservatrices :
+          <strong>panier moyen de 600€</strong>,
+          <strong>commission de 8%</strong>, et
+          <strong>abonnements moyens de 1 500€/an par OF</strong>.
+          Avec seulement 5% du marché en année 3, nous atteignons
+          déjà plusieurs millions d'euros de CA.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">Année 1</span>
+            <div class="stat-label">
+              150 OF • 3.5K inscriptions • 225K€ CA
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">Année 2</span>
+            <div class="stat-label">
+              350 OF • 15K inscriptions • 1.2M€ CA
+            </div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">Année 3</span>
+            <div class="stat-label">
+              950 OF • 50K inscriptions • 4M€ CA
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3>Unit Economics : notre modèle est ultra-rentable</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 15px;">
+            <strong>Côté Organismes de Formation :</strong><br />
+            • <strong>LTV (Lifetime Value) :</strong> 4 500 à
+            6 000€ - un OF reste en moyenne 3-4 ans et paie des
+            abonnements + commissions<br />
+            • <strong>CAC (Coût d'Acquisition Client) :</strong> 200€
+            - prospection commerciale efficace<br />
+            • <strong>Ratio LTV/CAC = &gt;20x</strong> → Pour chaque
+            euro investi en acquisition, nous générons 20€ de revenus
+          </p>
+          <p style="font-size: 1.05rem;">
+            <strong>Côté Professionnels de Santé :</strong><br />
+            • <strong>LTV :</strong> 180€+ - ils se forment 1-2 fois
+            par an, sur plusieurs années<br />
+            • <strong>CAC :</strong> &lt;1€ - acquisition organique
+            via SEO et réseaux sociaux<br />
+            • <strong>Structure ultra rentable</strong> avec un CAC
+            quasi nul
+          </p>
+        </div>
+      </section>
+
+      <!-- GO-TO-MARKET -->
+      <section class="section" id="go-to-market">
+        <h2 class="section-title">📈 Go-to-Market &amp; Sales</h2>
+
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">
+          Notre stratégie de go-to-market repose sur
+          <strong>deux axes complémentaires</strong> : nous devons à
+          la fois convaincre les organismes de formation de rejoindre
+          notre plateforme (côté offre) ET attirer les professionnels
+          de santé pour qu'ils viennent chercher des formations (côté
+          demande).
+        </p>
+
+        <h3 class="section-subtitle">
+          Stratégie double : offre + demande
+        </h3>
+
+        <div class="revenue-sources">
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              Côté Organismes (B2B)
+            </h4>
+            <ul class="feature-list">
+              <li>
+                Prospection à froid personnalisée (80% du pipeline)
+              </li>
+              <li>Programme "Early Partner"</li>
+              <li>Contenu &amp; expertise sectorielle</li>
+              <li>Webinaires &amp; podcast</li>
+              <li>Partenariats institutionnels</li>
+            </ul>
+          </div>
+
+          <div class="revenue-card">
+            <h4 style="color: #e57597;">
+              Côté Professionnels (B2C)
+            </h4>
+            <ul class="feature-list">
+              <li>SEO massif (50-100K visiteurs/mois)</li>
+              <li>Social-first (Instagram, LinkedIn)</li>
+              <li>Influence santé</li>
+              <li>Webinaires gratuits</li>
+              <li>Contenu pédagogique</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">150</span>
+            <div class="stat-label">OF / an / SDR</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">&lt;300€</span>
+            <div class="stat-label">CAC cible</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">40</span>
+            <div class="stat-label">OF déjà partenaires</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2%</span>
+            <div class="stat-label">Taux conversion cible</div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3>Notre machine commerciale B2B</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 15px;">
+            Nous recrutons un
+            <strong>SDR (Sales Development Representative)</strong>
+            qui sera dédié à la prospection des organismes de
+            formation. Sa mission : identifier, contacter et
+            convaincre les OF de rejoindre KIASMA.
+          </p>
+          <p>
+            <strong>Cadence quotidienne :</strong> 40 emails ciblés +
+            20 messages LinkedIn + 10-20 appels téléphoniques → 3 à 5
+            rendez-vous qualifiés par semaine
+          </p>
+          <p>
+            <strong>Objectif concret :</strong> 2-3 nouveaux OF
+            signés par semaine = 35 OF/trimestre =
+            <strong>150 OF la première année</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- ÉQUIPE & RECRUTEMENT -->
+      <section class="section" id="equipe">
+        <h2 class="section-title">👥 Équipe &amp; Recrutement</h2>
+
+        <h3 class="section-subtitle">
+          Équipe nécessaire pour la première année
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Pour lancer KIASMA, nous avons besoin d'une
+          <strong>équipe légère et efficace de 6 personnes</strong> :
+          Un axe stratégique avec le fondateur (CEO/CPO) et la
+          fondatrice (COO), un axe marketing (SDR/BD + customer
+          success), un axe produit et design (CTO et développeur
+          freelance).
+        </p>
+
+        <div class="team-grid">
+          <div class="team-role">
+            <h4 style="color: #7b68c4;">
+              Fondateur 1 – CEO/CPO
+            </h4>
+            <p>
+              <strong>Rôle :</strong> Vision &amp; stratégie, design
+              produit, acquisition professionnels, SEO/contenus,
+              communication, relations OF clés, fundraising
+            </p>
+            <p><strong>Coût :</strong> 72 000€/an</p>
+          </div>
+
+          <div class="team-role">
+            <h4 style="color: #7b68c4;">Fondateur 2 – COO</h4>
+            <p>
+              <strong>Rôle :</strong> Conformité et veille
+              réglementaire, qualité &amp; relecture, pilotage
+              administratif, support stratégique au CEO.
+            </p>
+            <p>
+              <strong>Coût :</strong> 15 000€/an (15j de consulting)
+            </p>
+          </div>
+
+          <div class="team-role">
+            <h4 style="color: #7b68c4;">
+              SDR/Business Developer
+            </h4>
+            <p>
+              <strong>Rôle :</strong> Prospection OF,
+              cold email/call, prise RDV, onboarding OF, suivi pipe
+              CRM, reporting, upsell
+            </p>
+            <p><strong>Objectif :</strong> 150 OF onboardés/an</p>
+            <p><strong>Coût :</strong> 38 000€/an (50% ETP)</p>
+          </div>
+
+          <div class="team-role">
+            <h4 style="color: #7b68c4;">
+              CTO/Developer Freelance
+            </h4>
+            <p>
+              <strong>Rôle :</strong> Architecture plateforme, dev,
+              supervision des dev, intégrations, scalabilité,
+              sécurité/RGPD
+            </p>
+            <p><strong>Coût :</strong> 57 200€/an (2j/sem)</p>
+          </div>
+
+          <div class="team-role">
+            <h4 style="color: #7b68c4;">
+              Customer Success Freelance
+            </h4>
+            <p>
+              <strong>Rôle :</strong> Accompagnement OF, import
+              catalogues, paramétrage, support, formation
+            </p>
+            <p><strong>Coût :</strong> 20 000€/an (114j)</p>
+          </div>
+
+          <div class="team-role">
+            <h4 style="color: #7b68c4;">
+              Développeur Full-Stack Freelance
+            </h4>
+            <p>
+              <strong>Rôle :</strong> Dev front &amp; back, features,
+              CRM, intégrations API, optimisation performance,
+              correctifs &amp; maintenance continue.
+            </p>
+            <p><strong>Coût :</strong> 60 800€/an (120j)</p>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3>Budget équipe Année 1 : 263 000€</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 15px;">
+            <strong>Total masse salariale :</strong> ~263K€ (incluant
+            charges sociales et freelances)<br />
+            <strong>ROI attendu :</strong> Cette équipe nous permet
+            d'onboarder 150 OF et de générer 225K€ de CA la première
+            année
+          </p>
+          <p style="font-size: 1.05rem;">
+            <strong>Ordre de priorité des recrutements :</strong
+            ><br />
+            1️⃣ <strong>SDR</strong> (commercial) - urgence maximale
+            pour onboarder les OF<br />
+            2️⃣ <strong>Customer Success</strong> - pour accompagner
+            les premiers OF<br />
+            3️⃣ <strong>CTO Freelance</strong> - pour superviser le
+            développement technique
+          </p>
+        </div>
+      </section>
+
+      <!-- STRATÉGIE DE FINANCEMENT -->
+      <section class="section" id="financement">
+        <h2 class="section-title">
+          💡 Stratégie de financement
+        </h2>
+
+        <h3 class="section-subtitle">
+          Objectif de levée : 350 à 500K€ pour financer 18 mois
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Pour lancer KIASMA, nous cherchons à lever
+          <strong>350 à 500 000€</strong> qui nous permettront de
+          financer les 18 premiers mois d'opérations (développement
+          produit + équipe + marketing). Cette levée combine
+          <strong>3 sources complémentaires</strong> pour minimiser la
+          dilution :
+        </p>
+
+        <div class="revenue-sources">
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4">1️⃣ Subventions ? (80-150K€)
+            </h4>
+            <ul class="feature-list">
+               <li>BPI : ?</li>
+               <li>Subventions innovation : ?</li>
+               <li>Métroôle/Région/Départements : ?</li> 
+               <li>autre ?</li> 
+            </ul> 
+        </div>
+
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4;">
+              2️⃣ Prêt d'honneur (30-70K€)
+            </h4>
+            <ul class="feature-list">
+              <li>Initiatives / REB</li>
+              <li>Assez rapide</li>
+              <li>Non dilutif</li>
+              <li>Finance les premiers mois</li>
+            </ul>
+          </div>
+
+          
+          <div class="revenue-card">
+            <h4 style="color: #7b68c4">3️⃣ Prêt bancaire (150-300K€)</h4>
+            <ul class="feature-list">
+                <li>Prêt professionnel dédié au développement de KIASMA</li>
+                <li>Amortissable sur 5 à 7 ans</li>
+                <li>Possibilité de garanties BPI / dispositifs publics</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">
+          Calendrier de financement sur 18 mois
+        </h3>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Nous procédons par
+          <strong>étapes progressives</strong> pour sécuriser le
+          financement tout en validant la traction :
+        </p>
+
+        <div class="roadmap-cards">
+          <div class="roadmap-card v1">
+            <h4>Mois 0-3 : Subventions & Prêt d’honneur</h4>
+            <p>Démarrage du financement non dilutif</p>
+            <p>
+              <strong>70-120K€ • Runway 3-5 mois</strong>
+            </p>
+          </div>
+
+          <div class="roadmap-card v2">
+            <h4>Mois 3-6 : Prêt bancaire professionnel</h4>
+            <p>Activation du levier de financement principal avec traction commercial de 70 OF onboardés</p>
+            <p>
+              <strong>150-300K€ • Process 6-8 semaines</strong>
+            </p>
+          </div>
+
+          <div class="roadmap-card v3">
+            <h4>Mois 12-18 : Renforcement pour hypercroissance</h4>
+            <p>GMV &gt; 1M€ • CA &gt; >300K€</p>
+            <p>
+              <strong>800K-1.2M€ • BPI/Banque/BA/VC spécialisés</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RISQUES -->
+      <section class="section" id="risques">
+        <h2 class="section-title">⚠️ Risques &amp; Mitigation</h2>
+
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">
+          Comme toute startup, KIASMA fait face à
+          <strong>plusieurs risques identifiés</strong>. Nous avons
+          analysé chaque risque et préparé des stratégies de
+          mitigation concrètes :
+        </p>
+
+        <table class="risk-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Risque</th>
+              <th style="width: 15%;">Impact</th>
+              <th style="width: 15%;">Probabilité</th>
+              <th style="width: 45%;">Comment nous le gérons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Risque réglementaire</strong><br />
+                <small>Non-conformité DPC, Qualiopi, RGPD</small>
+              </td>
+              <td>
+                ⚠️⚠️⚠️<br />
+                <small>Élevé</small>
+              </td>
+              <td>
+                ⚠️<br />
+                <small>Faible</small>
+              </td>
+              <td>
+                Expertise de notre <strong>COO</strong> en
+                réglementation formation + accompagnement juridique +
+                process de conformité stricts
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Adoption lente des OF</strong><br />
+                <small
+                  >Difficulté à convaincre les
+                  organismes</small
+                >
+              </td>
+              <td>
+                ⚠️⚠️⚠️<br />
+                <small>Élevé</small>
+              </td>
+              <td>
+                ⚠️⚠️<br />
+                <small>Moyen</small>
+              </td>
+              <td>
+                Programme <strong>"Early Partner"</strong> gratuit
+                (commission 15%) + Customer Success dédié + onboarding
+                assisté + 40 OF déjà partenaires
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Adoption lente des PS</strong><br />
+                <small
+                  >Pas assez de trafic sur la
+                  plateforme</small
+                >
+              </td>
+              <td>
+                ⚠️⚠️<br />
+                <small>Moyen</small>
+              </td>
+              <td>
+                ⚠️⚠️⚠️<br />
+                <small>Élevé</small>
+              </td>
+              <td>
+                <strong>SEO massif</strong> (objectif 50K
+                visiteurs/mois) + contenus viraux réseaux sociaux +
+                influence santé + webinaires gratuits
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Risque technique</strong><br />
+                <small>Bugs, retards de développement</small>
+              </td>
+              <td>
+                ⚠️⚠️<br />
+                <small>Moyen</small>
+              </td>
+              <td>
+                ⚠️<br />
+                <small>Faible</small>
+              </td>
+              <td>
+                <strong>CTO senior freelance</strong> pour supervision
+                + équipe dev externe qualifiée + tests automatiques +
+                développement itératif
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Concurrence</strong><br />
+                <small
+                  >Arrivée d'un concurrent (Doctolib,
+                  etc.)</small
+                >
+              </td>
+              <td>
+                ⚠️⚠️<br />
+                <small>Moyen</small>
+              </td>
+              <td>
+                ⚠️<br />
+                <small>Faible</small>
+              </td>
+              <td>
+                <strong>Vitesse d'exécution</strong> + spécialisation
+                santé + relations OF existantes + barrière à l'entrée
+                réglementaire + barrière liée à la construction du
+                dataset
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Risque financier</strong><br />
+                <small
+                  >Manque de trésorerie, burn trop
+                  rapide</small
+                >
+              </td>
+              <td>
+                ⚠️⚠️⚠️<br />
+                <small>Élevé</small>
+              </td>
+              <td>
+                ⚠️<br />
+                <small>Faible</small>
+              </td>
+              <td>
+                <strong>💡 Financement non dilutif mixte (subventions + prêt d’honneur + prêt bancaire)</strong>
+                🛡️ Runway sécurisé 18 mois grâce à un montage financier structuré
+                ⚡ Revenus dès le mois 1 via onboarding OF et premières commissions
+                📉 Contrôle strict du burn (équipe légère, freelances, charges maîtrisées)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box">
+          <h3>💪 Nos avantages compétitifs pour réduire les risques</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>40 OF déjà partenaires :</strong> Nous avons
+              déjà un track record et des relations établies
+            </li>
+            <li>
+              <strong>MVP fonctionnel :</strong> rhomboid.fr et
+              sesamoid.fr prouvent que le concept fonctionne
+            </li>
+            <li>
+              <strong>Expertise secteur :</strong> Les fondateurs
+              connaissent parfaitement l'écosystème de la formation
+              santé
+            </li>
+            <li>
+              <strong>Marché obligatoire :</strong> Les
+              professionnels DOIVENT se former → demande stable et
+              récurrente
+            </li>
+            <li>
+              <strong>Barrière réglementaire :</strong> La complexité
+              réglementaire décourage les concurrents généralistes
+            </li>
+            <li>
+              <strong>Financement mixte :</strong> Nous diversifions
+              les sources pour sécuriser notre trésorerie
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img
+      src="logo kiasma.png"
+      alt="Logo KIASMA"
+      class="logo-footer"
+    />
+    <h3 style="margin-bottom: 20px;">KIASMA</h3>
+    <p>
+      La plateforme de référence pour la formation continue des
+      professions en santé
+    </p>
+    <p style="margin-top: 30px; opacity: 0.8;">
+      © 2025 KIASMA - Tous droits réservés
+    </p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
